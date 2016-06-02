@@ -9,6 +9,7 @@ Custom cricket analysis
 1. Python
 2. R
 3. lxml and Requests python library
-
+  * pip install lxml
+  * pip install requests
 ## Usage
 
