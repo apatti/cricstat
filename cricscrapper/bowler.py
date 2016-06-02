@@ -75,7 +75,7 @@ class BowlerScrapper:
 
 if __name__ == '__main__':
     matches=[]
-    matches.append(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2016/content/series/968923.html?template=fixtures"))
-    matches.append(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2015/content/series/791129.html?template=fixtures"))
-    matches.append(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2014/content/series/695871.html?template=fixtures"))
+    matches.extend(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2016/content/series/968923.html?template=fixtures"))
+    matches.extend(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2015/content/series/791129.html?template=fixtures"))
+    matches.extend(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2014/content/series/695871.html?template=fixtures"))
     BowlerScrapper.saveToCsv("ipl.csv",matches)
