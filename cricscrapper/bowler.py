@@ -70,12 +70,12 @@ class BowlerScrapper:
                 for inning,inningData in matchData["innings"].iteritems():
                     innings = inning
                     for bowlerData in inningData:
-                        writer.writerow(matchid,year,innings,
-                                        bowlerData["bowler"],bowlerData["over"],bowlerData["runs"],bowlerData["wickets"],bowlerData["stat"],bowlerData["url"])
+                        writer.writerow((matchid,year,innings,
+                                        bowlerData["bowler"],bowlerData["over"],bowlerData["runs"],bowlerData["wickets"],bowlerData["stat"],bowlerData["url"]))
 
 if __name__ == '__main__':
     matches=[]
     matches.extend(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2016/content/series/968923.html?template=fixtures"))
     matches.extend(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2015/content/series/791129.html?template=fixtures"))
     matches.extend(BowlerScrapper.scrapSeries("http://www.espncricinfo.com/indian-premier-league-2014/content/series/695871.html?template=fixtures"))
-    BowlerScrapper.saveToCsv("ipl.csv",matches)
+    BowlerScrapper.saveToCsv("../data/ipl_bowler.csv",matches)
