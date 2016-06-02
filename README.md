@@ -10,5 +10,5 @@ Custom cricket analysis
 2. R
 3. lxml and Requests python library
 
-## Usuage
+## Usage
 
