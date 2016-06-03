@@ -1,0 +1,2 @@
+inputfilename <- "../data/ipl.csv"
+
